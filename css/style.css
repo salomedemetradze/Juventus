@@ -1,0 +1,28 @@
+.heading {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	margin-left: 400px;
+}
+.H {
+	background-color: black
+	/*width: 100%;*/
+}
+.logo {
+	height: 100px;
+	float: left;
+}
+.page1 {
+	background-color: #1a1a1a;
+}
+.clear {
+	clear: both;
+}
+.text1 {
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
