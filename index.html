@@ -12,12 +12,41 @@
 <body class="page1">
 	<header class="H">
 		<div class="logoslogan">
-		 <img class="logo" src="images/ju.png" alt="J">
-		 <h1 class="heading"> Storia Di Un Grande Amore </h1>
-		 <img class="logo" src="images/ju.png" alt="J">
+		 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
+		 
+		 <div class="slideshow">
+            <div class="slides">
+            <h1 class="heading"> Storia Di Un Grande Amore </h1>
+          </div>
+          <div class="slides">
+            <h2 class="story"> story of great love </h2>
+          </div>
+          <div class="slides">
+            <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
+          </div>
+          </div>
+		 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
 		</div>
 	</header>
-	<p class="text1"> THE TEAM </p>
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("slides");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}
+		  slides[slideIndex-1].style.display = "block";  
+		  setTimeout(showSlides, 2000); // Change image every 2 seconds
+		  document.getElementByClassName("slides").style.animationTimingFunction = "linear"
+		}
+	</script>
+	<h2 class="text1 blinking"> life is a matter of black and white </h2>
+	<p class="text2"> THE TEAM </p>
 	<section class="section1">
 		<!-- <div class="box_skitter box_skitter_large">
 			<ul>

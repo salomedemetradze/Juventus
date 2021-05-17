@@ -7,6 +7,11 @@
 	color: white;
 	font-weight: bold;
 }
+.story {
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+}
 .H {
 	background-color: black
 	/*width: 100%;*/
@@ -22,6 +27,27 @@
 	clear: both;
 }
 .text1 {
+	text-transform: uppercase;
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	text-shadow: 5px 2px #21201c;
+	animation: colorchange 2s linear 2s infinite;
+}	
+@keyframes colorchange {
+  0%   {color: white;}
+  25%  {color: #4f4c43;}
+  50% {opacity: 0;}
+  75% {opacity: 0;}
+  100% {color: white;}
+}
+/*.blinking {
+	animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+  
+}*/
+.text2 {
 	font-size: 30px;
 	color: white;
 	font-weight: bold;
