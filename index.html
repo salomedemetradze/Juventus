@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Juventus</title>
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/js-image-slider.css">
 	<script type="text/javascript" src="javascript/js-image-slider.js"></script>
 	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/skitter.css"> -->
+	<script src="https://kit.fontawesome.com/925e4d41d1.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 </head>
 <body class="page1">
 	<header class="H">
 		<div class="logoslogan">
-		 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
-		 
-		 <div class="slideshow">
-            <div class="slides">
-            <h1 class="heading"> Storia Di Un Grande Amore </h1>
-          </div>
-          <div class="slides">
-            <h2 class="story"> story of great love </h2>
-          </div>
-          <div class="slides">
-            <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
-          </div>
-          </div>
-		 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
+			 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
+			 <div class="slideshow">
+	            <div class="slides">
+	            	<h1 class="heading"> Storia Di Un Grande Amore </h1>
+	          	</div>
+	          	<div class="slides">
+	           	 	<h2 class="story"> story of great love </h2>
+	          	</div>
+	          	<div class="slides">
+	           		 <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
+	          	</div>
+	          </div>
+			 <!-- <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a> -->
+			<form class="searchform">
+	  			<input type="search" id="myInput" placeholder="Search.." name="search">
+	  			<a href="#" class="formbutton" onclick="myFunction()"><i class="fa fa-search"></i>
+	  				 <!-- <button type="submit" ></button> -->
+	  			</a>
+			</form>
 		</div>
+		<p id="demo"></p>
 	</header>
 	<script>
 		var slideIndex = 0;
@@ -45,8 +56,45 @@
 		  document.getElementByClassName("slides").style.animationTimingFunction = "linear"
 		}
 	</script>
+	<script type="text/javascript">
+	document.getElementById("myInput").addEventListener("search", myFunction);
+
+function myFunction() {
+  var x = document.getElementById("myInput");
+  document.getElementById("demo").innerHTML = x.value;
+}
+	</script>
+	<nav>
+		<ul class="nav-ul">
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> home</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> <a href="#section2"> about </a> </li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> team</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> management</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> fanclub</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> news</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> contact</li>
+			<li class="nav-li"> <i class="fas fa-ellipsis-h"></i> lyrics</li>
+		</ul>
+	</nav>
 	<h2 class="text1 blinking"> life is a matter of black and white </h2>
-	<p class="text2"> THE TEAM </p>
+	<span>
+		<i class="fas fa-play"></i>
+	</span>
+	<audio hidden>
+			<source src="music/InnodellaJuventus.mp3" type="audio/mpeg"> 
+	</audio>
+	<script>
+		let a=0;document.getElementsByClassName("fa-play")[0].addEventListener("click",function(){
+		if(a==0){
+		document.getElementsByTagName("audio")[0].play();a++;document.querySelector("fa-play").style.opacity="1";
+		}
+		else{
+		document.querySelector("audio").pause();a--;document.querySelector("fa-play").style.opacity=".5";
+		}
+		});
+  </script>
+		<p class="text2"> THE TEAM </p>
+
 	<section class="section1">
 		<!-- <div class="box_skitter box_skitter_large">
 			<ul>
@@ -78,12 +126,160 @@
 	            <img id="image1" src="images/5.jpg" />
 	            <img id="image1" src="images/6.jpg" />
 	            <img id="image1" src="images/7.jpg" />
-	            <img id="image1" src="images/8.jpg" alt="Caption for slide 5">
+	            <img id="image1" src="images/8.jpg" alt="Alvaro Morata">
+	            <img id="image1" src="images/9.jpg" />
+	            <img id="image1" src="images/10.jpg" />
+	            <img id="image1" src="images/11.jpg" />
 	        </div>
     	</div>
 	</section>
 	<!-- <script type="text/javascript" language="javascript" src="javascript/app.js"></script>
 	<script type="text/javascript" language="javascript" src="javascript/jquery.skitter.min.js"></script> -->
-	
+	<section class="section2" id="section2">
+		<div class="aboutus">
+			<div class="box1">
+				<h2 class="about"> about Juventus</h2>
+				<i class="icon-Juventus_Logo"> </i>
+			</div>
+			<div class="box2">
+				<p class="from"> from 1897 </p>
+				<p class="history"> იუვენტუსი, იგივე იუვე, როგორც მას ხშირად მოიხსენიებენ ქართველი თუ უცხოელი "ტიფოზები", იგივე გულშემატკივრები, როგორც კლუბი, 1897 წლიდან არსებობს. მისი ფორმა, თავდაპირველად ვარდისფერი ფერის იყო. ხოლო თუ რატომ არის ამჟამინდელი ფორმები შავ-თეთრი, თავისი საინტერესო ისტორია აქვს. ყველაფერი დაიწყო იქიდან, რომ იუვეს მესვეურებმა აღნიშნული ვარდისფერი ფორმა გააგზავნეს შესაკერად ინგლისში, სადაც ფორმამ, ასე რომ ვთქვათ, გახუნებულ მდგომარეობაში ჩააღწია და მისი ფერის გარჩევა უკვე შეუძლებელი იყო. დაკვეთის შემსრულებლებმა ჩათვალეს, რომ ფორმა შავ-თეთრი ფერის იყო და სწორედ ასეთი ფერის ფორმები გაუგზავნეს დამკვეთებს ტურინში. შედეგად იუვეს დარჩა ფორმა იმ სახით, რომელთნაც დღესდღეობით ასოცირდება მთელი მსოფლიოსთვის და ასე ვთქვათ, მისგან გამომდინარე ლოზუნგთან ერთად - "Life is A Matter Of Black And White" იუვენტუსის სავიზიტო ბარათად იქცა. ასევე, არავისთვის არ არის უცხო მეტსახელი - "Vecchia Signora", რაც ქართულად ნიშნავს ბებერ ქალბატონს. </p>
+			</div>
+		</div>
+	</section>
+	<section class="section3">
+		<div class="box3">
+			<div class="box4">
+				<img class="star" src="images/star.png" alt="star">
+				<img class="star" src="images/star.png" alt="star">
+				<img class="star" src="images/star.png" alt="star">
+			</div>
+			<img class="logo2" src="images/ju.png" alt="u">
+			<div class="box5">
+				<div class="box6">
+					<p> inno della juventus </p>
+					<p> Simili a degli eroi </p>
+					<p> abbiamo il cuore a strisce </p>
+					<p> portaci dove vuoi </p>
+					<p> verso le tue conquiste </p>
+					<p> dove tu arriverai </p>
+					<p> sarà la storia di tutti noi </p>
+					<p> solo chi corre può </p>
+					<p> fare di te la squadra che sei </p>
+					<p> juve, storia di un grande amore </p>
+					<p> bianco che abbraccia il nero </p> 
+					<p> coro che si alza </p>
+					<p> davvero per te </p>
+					<p> portaci dove vuoi </p>
+					<p> siamo una curva in festa </p>
+					<p> come un abbraccio noi </p>
+					<p> e ancora non ci basta </p>
+					<p> ogni pagina nuova sai </p>
+					<p> sarà ancora la storia </p>
+					<p> di tutti noi </p>
+					<p> solo chi corre può </p>
+					<p> fare di te </p>
+					<p> quello che sei </p>
+					<p> juve, storia di un grande amore </p>
+					<p> bianco che abbraccia il nero coro </p>
+					<p> che si alza davvero </p>
+					<p> solo per te </p>
+					<p> E' la juve, </p>
+					<p> storia di quel che sarò </p>
+					<p> quando fischia l'inizio </p>
+					<p> inizia quel sogno che sei </p>
+					<p> juve, storia di un grande amore </p>
+					<p> bianco che abbraccia il nero </p>
+					<p> coro che si alza davvero </p>
+					<p> juve per sempre sarà </p>
+					<p> juve, storia di un grande amore </p>
+					<p> bianco che abbraccia il nero </p>
+					<p> coro che si alza davvero </p>
+					<p> juve per sempre sarà </p>
+					<p> juve ohhh ohhh </p>
+					<p> juve per sempre sarà </p>
+					<p> juventus per sempre sarà </p>
+				</div>
+				<div class="box7">
+					<p>Juventus F.C. Anthem</p>
+					<p>similar to heroes</p>
+					<p>we've got a striped heart</p>
+					<p>take us wherever you want</p>
+					<p>to your conquests</p>
+					<p>where you'll arrive</p>
+					<p>it will be the story of all of us</p>
+					<p>only who runs can</p>
+					<p>make of you the team you are</p>
+					<p>juve, story of a great love</p>
+					<p>white that hugs the black</p>
+					<p>chant that really stands up for you</p>
+					<p>take us wherever you want</p>
+					<p>we're a celebrating stand</p>
+					<p>like a hug us</p>
+					<p>ant it's still not enough for us</p>
+					<p>every new page, you know</p>
+					<p>will be the story of all of us</p>
+					<p>only who runs can</p>
+					<p>make what you are</p>
+					<p>juve, story of a great love</p>
+					<p>white that hugs the black</p>
+					<p>chant that really stands up for you</p>
+					<p>and juve, story of what i will be</p>
+					<p>when the star whistles</p>
+					<p>and the dream that you are starts</p>
+					<p>juve, story of a great love</p>
+					<p>white that hugs the black</p>
+					<p>chant that really stands up</p>
+					<p>juve will always be</p>
+					<p>juve, story of a great love</p>
+					<p>white that hugs the black</p>
+					<p>chant that really stands up</p>
+					<p>juve will always be</p>
+					<p>juve...juventus will always be</p>
+				</div>
+				<div class="box8">
+					<p>იუვენტუსის ჰიმნი</p>
+					<p>გმირების მსგავსად</p>
+					<p>გვაქვს ზოლიანი გული</p>
+					<p>წაგვიყვანე, სადაც გინდა</p>
+					<p>შენი დაპყრობებისკენ</p>
+					<p>სადაც შენ მიხვალ,</p>
+					<p>იქნება ყველა ჩვენგანის ისტორია</p>
+					<p>მხოლოდ მას ვინც დარბის, შეუძლია</p>
+					<p>შენგან შექმნას ის გუნდი, რაც ხარ</p>
+					<p>იუვე, დიდი სიყვარულის ისტორია</p>
+					<p>თეთრი, რომელიც შავს ეხუტება</p>
+					<p>გუნდი, რომელიც ნამდვილად შენთვის</p> 
+					<p>დგება ფეხზე</p>
+					<p>წაგვიყვანე, სადაც გინდა</p>
+					<p>ჩვენ ვართ ტრიბუნა დღესასწაულზე</p>
+					<p>როგორც ჩახუტება</p>
+					<p>და ეს მაინც არ გვყოფნის</p>
+					<p>ყოველი ახალი გვერდი იცოდე,</p>
+					<p>ყველა ჩვენგანის ისტორია იქნება</p>
+					<p>მხოლოდ მას ვინც დარბის, შეუძლია</p>
+					<p>შენგან შექმნას ის, რაც ხარ</p>
+					<p>იუვე, დიდი სიყვარულის ისტორია</p>
+					<p>თეთრი, რომელიც შავს ეხუტება</p>
+					<p>გუნდი, რომელიც ნამდვილად შენთვის</p> 
+					<p>დგება ფეხზე</p>
+					<p>და იუვე, ისტორია იმისა, თუ რა ვიქნები</p>
+					<p>როდესაც დასაწყისი უსტვენს</p>
+					<p>იწყება ოცნება, რომელიც შენ ხარ</p>
+					<p>იუვე, დიდი სიყვარულის ისტორია</p>
+					<p>თეთრი, რომელიც შავს ეხუტება</p>
+					<p>გუნდი, რომელიც ნამდვილად </p> 
+					<p>ფეხზე დგება</p>
+					<p>იუვე ყოველთვის იქნება</p>
+					<p>იუვე, დიდი სიყვარულის ისტორია</p>
+					<p>თეთრი, რომელიც შავს ეხუტება</p>
+					<p>გუნდი, რომელიც ნამდვილად </p> 
+					<p>ფეხზე დგება</p>
+					<p>იუვე ყოველთვის იქნება</p>
+					<p>იუვე...იუვენტუსი ყოველთვის იქნება</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>
