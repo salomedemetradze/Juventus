@@ -13,6 +13,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&family=Lobster&family=MonteCarlo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	 <link href="css/ninja-slider.css" rel="stylesheet" />
+    <script src="javascript/ninja-slider.js" type="text/javascript"></script>
 </head>
 <body class="page1">
 	<header class="H">
@@ -28,16 +31,60 @@
 	          	<div class="slides">
 	           		 <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
 	          	</div>
-	          </div>
-			 <!-- <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a> -->
-			<form class="searchform">
-	  			<input type="search" id="myInput" placeholder="Search.." name="search">
-	  			<a href="#" class="formbutton" onclick="myFunction()"><i class="fa fa-search"></i>
-	  				 <!-- <button type="submit" ></button> -->
-	  			</a>
-			</form>
+	    </div>
+			 <a href="index.html"> <img class="logo" src="images/ju.png" alt="J"> </a>
 		</div>
-		<!-- <p id="demo"></p> -->
+		<div class="navdiv">
+			<nav>
+				<ul class="nav-ul">
+					<li class="nav-li"> <i class="fas fa-trophy"></i> home </li>
+					<li class="nav-li"> <a href="#section2"> about </a> </li>
+					<li class="nav-li team"> team </li>
+					<img class="ball" src="images/ball.png" alt="ball">
+					<li class="nav-li"> management </li>
+					<li class="nav-li"> news </li>
+					<li class="nav-li"> fanclub </li>
+					<li class="nav-li"> contact </li>
+					<li class="nav-li"> lyrics <i class="fas fa-trophy"></i> </li>
+				</ul>
+			</nav>
+			<div id="sliderFrame">
+		        <div id="slider">
+		            <img id="image1" src="images/4.jpg" alt="Christiano Ronaldo">
+		            <img id="image1" src="images/5.jpg" />
+		            <img id="image1" src="images/6.jpg" />
+		            <img id="image1" src="images/7.jpg" />
+		            <img id="image1" src="images/8.jpg" alt="Alvaro Morata">
+		            <img id="image1" src="images/9.jpg" />
+		            <img id="image1" src="images/10.jpg" />
+		            <img id="image1" src="images/11.jpg" />
+		        </div>
+	    	</div>
+	    </div>
+		<!-- <div class="audioform"> -->
+			<span>
+				<i class="fas fa-play"></i>
+			</span>
+			<audio hidden>
+					<source src="music/InnodellaJuventus.mp3" type="audio/mpeg"> 
+			</audio>
+			<script>
+				let a=0;document.getElementsByClassName("fa-play")[0].addEventListener("click",function(){
+				if(a==0){
+				document.getElementsByTagName("audio")[0].play();a++;document.querySelector("fa-play").style.opacity="1";
+				}
+				else{
+				document.querySelector("audio").pause();a--;document.querySelector("fa-play").style.opacity=".5";
+				}
+				});
+		    </script>
+	  			<form class="searchform">
+		  			<input type="search" id="myInput" placeholder="Search.." name="search">
+		  			<a href="#" class="formbutton" onclick="myFunction()"><i class="fa fa-search"></i>
+		  				 <!-- <button type="submit" ></button> -->
+		  			</a>
+				</form>
+		<!-- </div> -->
 	</header>
 	<script>
 		var slideIndex = 0;
@@ -56,57 +103,17 @@
 		  // document.getElementsByClassName("slides").Style.animation.Timing.Function = "linear"
 		}
 	</script>
-	<script type="text/javascript">
-	document.getElementById("myInput").addEventListener("search", myFunction);
-
-function myFunction() {
-  var x = document.getElementById("myInput");
-  document.getElementById("demo").innerHTML = x.value;
-}
-	</script>
-	<h2 class="text1 blinking"> fino alla fine </h2>
-	<nav>
-		<ul class="nav-ul">
-			<li class="nav-li"> <i class="fas fa-sort"></i> home <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> <a href="#section2"> about </a> <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> team <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> management <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> fanclub <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> news <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> contact <i class="fas fa-sort"></i> </li>
-			<li class="nav-li"> <i class="fas fa-sort"></i> lyrics <i class="fas fa-sort"></i> </li>
-		</ul>
-	</nav>
-	<span>
-		<i class="fas fa-play"></i>
-	</span>
-	<audio hidden>
-			<source src="music/InnodellaJuventus.mp3" type="audio/mpeg"> 
-	</audio>
-	<script>
-		let a=0;document.getElementsByClassName("fa-play")[0].addEventListener("click",function(){
-		if(a==0){
-		document.getElementsByTagName("audio")[0].play();a++;document.querySelector("fa-play").style.opacity="1";
-		}
-		else{
-		document.querySelector("audio").pause();a--;document.querySelector("fa-play").style.opacity=".5";
-		}
-		});
-  </script>
-		<p class="text2"> THE TEAM </p>
-
 	<section class="section1">
-		<div id="sliderFrame">
-	        <div id="slider">
-	            <img id="image1" src="images/4.jpg" alt="Christiano Ronaldo">
-	            <img id="image1" src="images/5.jpg" />
-	            <img id="image1" src="images/6.jpg" />
-	            <img id="image1" src="images/7.jpg" />
-	            <img id="image1" src="images/8.jpg" alt="Alvaro Morata">
-	            <img id="image1" src="images/9.jpg" />
-	            <img id="image1" src="images/10.jpg" />
-	            <img id="image1" src="images/11.jpg" />
-	        </div>
+		<div id="ninja-slider">
+		        <div class="inner">
+		            <ul>
+		                <li> <img class="ns-img" src="images/19.jpg"> </li>
+		                <li> <img class="ns-img" src="images/20.jpg"> </li>
+		                <li> <img class="ns-img" src="images/21.jpg"> </li>
+		                <li> <img class="ns-img" src="images/22.jpg"> </li>
+		            </ul>
+		        </div>
+		        <div class="fs-icon" title="Expand/Close"></div>
     	</div>
 	</section>
 	<section class="section2" id="section2">
@@ -261,18 +268,8 @@ function myFunction() {
 		 	<div class="gradient"></div>
  			<div class="spotlight"></div>
 		</div>
-		<div class="box9">
-			<p class="Chiellini"> Giorgio </p>	
-			<p class="chielo"> Chiellini </p>
-			<img class="image2" src="images/17.jpeg" alt="GiorgioChiellini">
-			<a href="Giorgio.html" target="_blank"> <p class="vrclad"> ვრცლად </p> </a>
-		</div>
-		<div class="box10">
-			<p class="Ronaldo"> Christiano </p>
-			<p class="Christiano"> Ronaldo </p>
-			<img class="image4" src="images/4.jpg" alt="ChristianoRonaldo">
-			<p class="vrclad"> ვრცლად </p>
-		</div>
+		<img class="image2" src="images/17.jpeg" alt="GiorgioChiellini">
+		<img class="image4" src="images/ronaldo.jpg" alt="ChristianoRonaldo">
 		<img class="image5" src="images/5.jpg" alt="PauloDybala">
 		<img class="image6" src="images/17.jpg" alt="leonardoBonucci">
 		<img class="image7" src="images/18.jpeg" alt="WojciechSzczesny">
@@ -286,13 +283,80 @@ function myFunction() {
 		<img class="image15" src="images/16.jpg">
 		<img class="image16" src="images/Ramsey.jpg" alt="AaronRamsey">
 		<img class="image17" src="images/Bernardeschi.jpg" alt="FedericoBernardeschi">
+			<div class="box9">
+				<img src="images/Giorgio.jpeg">
+				<div class="leftbox">
+					<p class="chielo"> Giorgio Chiellini </p>
+					<p class="Giorgio"> (დაბადების თარიღი: 14 აგვისტო, 1984 წელი) </p>
+					<p class="history1"> ჯორჯო იუვენტუსში თამაშობს 2005 წლიდან </p>
+				<!-- <a href="Giorgio.html" target="_blank"> <p class="vrclad"> ვრცლად </p> </a> -->
+				</div>
+			</div>
+			<div class="box10">
+				<!-- <p class="Ronaldo">  </p> -->
+				
+				<p class="Christiano"> Christiano Ronaldo </p>
+			</div>
 		<div class="photos"> 
-    <img src="images/19.jpg" /> 
-    <img src="images/20.jpg" /> 
-    <img src="images/21.jpg" /> 
-    <img src="images/22.jpg" />
+    		<img src="images/19.jpg" alt="players"/> 
+    		<img src="images/20.jpg" alt="players"/> 
+    		<img src="images/21.jpg" alt="players"/> 
+    		<img src="images/22.jpg" alt="players"/>
+		</div>
+		<h2 class="defenders"> Defenders </h2>
+		<div class="swiper-container mySwiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="images/17.jpeg" />
+    </div>
+    <div class="swiper-slide"><img src="images/17.jpg" />
+    </div>
+    <div class="swiper-slide"><img src="images/14.jpg" />
+    </div>
+    <div class="swiper-slide"><img src="images/danilo7.jpg">
+    </div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
 </div>
+	<h2 class="forwards"> Forwards </h2>
+	<div class="swiper-container goodSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/Bernardeschi.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/fagioli.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
 	</section>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="javascript/new.js"></script>
 	<script>
 	var paragraph = document.getElementsByClassName('blackwhite')[0];
 
@@ -329,5 +393,65 @@ function textEffect(animationName) {
 
 textEffect('fly-in-out');
 </script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+	</script>
+	<script>
+		var swiper = new Swiper(".goodSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+	</script>
+<section class="section5">
+	<p> Andrea Agnelli </p>
+	<img src="images/small.png">
+</section>
+<section class="section6">
+	<p>მიმდინარეობს მოლაპარაკებები სასუოლოსთან ლოკატელის იუვენტუსში ტრანსფერთან დაკავშირებით. შეთავაზება შეადგენს 30 მილიონ ევროს.</p>
+	<img class="Locatelli" src="images/locatelli.jpg" alt="locatelli">
+	<p>13 აგვისტო</p>
+</section>
+<section class="section7">
+	<div class="textball">
+		<p class="text2"> i love juventus </p>
+		<img class="ball2" src="images/Soccerball.svg.png" alt="ball">
+	</div>
+</section>
+<footer>
+	<img class="zebra" src="images/zebra.jpg" alt="zebra">
+	<h2 class="text1 blinking"> fino alla fine </h2>
+		<div class="div2">
+			<h2> contact </h2>
+			<p> E-mail: contactmail@mail </p>
+			<p> Tel.: 511 11 11 11 </p>
+		</div>
+	<p class="author"> დიზაინის და პროგრამირების ავტორი: </p>
+	<p class="designauthor">სალომე დემეტრაძე</p>
+	<p class="date"> 2021 </p>
+</footer>
 </body>
 </html>
