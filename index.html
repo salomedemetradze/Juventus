@@ -27,10 +27,35 @@
 				 <img class="ball" src="images/ball.png" alt="ball">
 				 <h3 class="me"> me </h3>
 			</div>
-			 <span>
-				<i class="fas fa-play"></i>
-			</span>
-			<audio hidden>
+			<div class="buttons">
+				<button type="button"> sign in </button>
+				<button type="button"> sign up </button>
+			</div>
+		</div>
+		<nav class="navigation">
+			<ul class="nav-ul">
+				<li class="nav-li"> <a href="#section2"> about </a> </li>
+				<li class="nav-li lyrics">  <span> <i class="fas fa-play"></i> </span> lyrics </li>
+				<li class="nav-li"> team </li>
+			</ul>
+			<div class="slideshow">
+	            <div class="slides">
+	            	<h1 class="heading"> Storia Di Un Grande Amore </h1>
+	          	</div>
+	          	<div class="slides">
+	           	 	<h2 class="story"> story of great love </h2>
+	          	</div>
+	          	<div class="slides">
+	           		 <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
+	          	</div>
+	    	</div>
+			<ul class="ul2">
+				<li class="nav-li2"> management </li>
+				<li class="nav-li2 news"> news </li>
+				<li class="nav-li2"> contact <!-- <i class="far fa-circle"></i> --> </li>
+			</ul>
+		</nav>
+		<audio hidden>
 					<source src="music/InnodellaJuventus.mp3" type="audio/mpeg"> 
 			</audio>
 			<script>
@@ -43,29 +68,8 @@
 				}
 				});
 		    </script>
-		</div>
-		<div class="slideshow">
-	            <div class="slides">
-	            	<h1 class="heading"> Storia Di Un Grande Amore </h1>
-	          	</div>
-	          	<div class="slides">
-	           	 	<h2 class="story"> story of great love </h2>
-	          	</div>
-	          	<div class="slides">
-	           		 <h2 class="story"> დიდი სიყვარულის ისტორია </h2>
-	          	</div>
-	    	</div>
-		<div class="navdiv">
-			<nav>
-				<ul class="nav-ul">
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> <a href="#section2"> about </a> </li>
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> lyrics </li>
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> team </li>
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> management </li>
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> news </li>
-					<li class="nav-li"> <i class="fas fa-circle-notch"></i> contact </li>
-				</ul>
-			</nav>
+		
+			
 			<div id="sliderFrame">
 		        <div id="slider">
 		            <img id="image1" src="images/4.jpg" alt="Christiano Ronaldo">
@@ -79,7 +83,6 @@
 		            <img id="image1" src="images/11.jpg" />
 		        </div>
 	    	</div>
-	    </div>
 				<form class="searchform">
 		  			<input type="search" id="myInput" placeholder="Search.." name="search">
 		  			<a href="#" class="formbutton" onclick="myFunction()"><i class="fa fa-search"></i>
